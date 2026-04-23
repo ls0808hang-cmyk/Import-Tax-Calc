@@ -24,6 +24,7 @@ A web-based calculator designed to help users estimate import taxes (Duty and VA
   - Automatically determines exemption status.
   - Calculates Duty (관세) and VAT (부가세) based on the entire amount if the limit is exceeded.
   - Provides a total estimated payment in KRW.
+- **About Page:** Provides service information, expertise, and contact details.
 - **SEO Optimized Content:** Includes a detailed guide on import tax rules (List clearance vs. General clearance, 합산과세, etc.).
 
 ## Current Plan: Initial Implementation
