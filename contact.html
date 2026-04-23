@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>서비스 소개 | 해외직구 관부가세 계산기</title>
+  <title>문의하기 | 해외직구 관부가세 계산기</title>
   <meta
     name="description"
-    content="해외직구 관부가세 계산기의 운영 목적, 제공 정보의 성격, 업데이트 방향, 이용자에게 도움이 되는 방식에 대해 안내합니다."
+    content="해외직구 관부가세 계산기 사이트의 문의 안내 페이지입니다. 오탈자 제보, 링크 오류, 일반적인 의견 전달 방법을 안내합니다."
   />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://import-tax-calc.pages.dev/about.html" />
+  <link rel="canonical" href="https://import-tax-calc.pages.dev/contact.html" />
 
   <style>
     :root {
@@ -90,25 +90,25 @@
     }
     p { margin: 0; color: var(--muted); }
     .section { padding: 48px 0; }
-    .card + .card { margin-top: 18px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
     .list { padding-left: 18px; margin: 0; color: var(--muted); }
     .list li + li { margin-top: 10px; }
-    .guide-links, .footer-links {
+    .mail-box {
+      margin-top: 14px;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+    }
+    .footer-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px 14px;
-      margin-top: 16px;
-    }
-    .pill-link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-weight: 700;
-      color: var(--text);
+      margin-top: 12px;
     }
     footer {
       padding: 32px 0 60px;
@@ -120,6 +120,7 @@
     @media (max-width: 860px) {
       .header-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
       .hero-card, .card { padding: 22px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -145,81 +146,65 @@
     <section class="hero">
       <div class="container">
         <div class="hero-card">
-          <span class="eyebrow">서비스 소개</span>
-          <h1>해외직구 세금 계산을 쉽게 이해할 수 있도록 돕는 안내형 사이트입니다</h1>
+          <span class="eyebrow">문의하기</span>
+          <h1>사이트 관련 의견과 제보를 보내주세요</h1>
           <p>
-            해외직구를 처음 하는 이용자에게 관부가세 계산은 어렵게 느껴질 수 있습니다.
-            이 사이트는 예상세액을 참고용으로 계산하고,
-            통관 방식·합산과세·개인통관고유부호처럼 실제 구매 전에 필요한 핵심 개념을
-            쉽게 정리해 보여주는 정보형 계산기입니다.
+            이 페이지는 해외직구 관부가세 계산기 사이트의 일반 문의를 위한 안내 페이지입니다.
+            오탈자, 잘못된 링크, 문구 제안, 페이지 개선 의견처럼
+            사이트 품질 향상에 도움이 되는 내용을 보내주시면 확인 후 반영을 검토합니다.
           </p>
-          <div class="guide-links">
-            <a class="pill-link" href="index.html">홈으로 가기</a>
-            <a class="pill-link" href="faq.html">FAQ 보기</a>
-            <a class="pill-link" href="sources.html">공식 출처 보기</a>
-          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
+      <div class="container grid">
         <article class="card">
-          <h2>왜 이 사이트를 만들었나요?</h2>
-          <p>
-            해외직구를 할 때 많은 사용자가 “얼마부터 세금이 붙는지”, “배송비도 포함되는지”,
-            “주문을 나누면 괜찮은지” 같은 질문에서 막히곤 합니다.
-            이 사이트는 복잡한 기준을 최대한 쉽게 풀어,
-            구매 전 참고 판단을 돕기 위해 만들어졌습니다.
-          </p>
-        </article>
-
-        <article class="card">
-          <h2>이 사이트가 제공하는 것</h2>
+          <h2>이런 문의를 받을 수 있습니다</h2>
           <ul class="list">
-            <li>해외직구 예상 관부가세를 참고용으로 계산하는 기능</li>
-            <li>목록통관과 일반통관 차이처럼 자주 헷갈리는 개념 설명</li>
-            <li>합산과세, 품목별 주의사항, 개인통관고유부호 가이드</li>
-            <li>초보자도 읽기 쉬운 질문답변형 문서와 예시형 설명</li>
+            <li>오탈자나 문장 수정 제안</li>
+            <li>잘못된 내부링크 또는 외부 링크 제보</li>
+            <li>FAQ나 가이드에 추가되면 좋은 주제 제안</li>
+            <li>페이지 가독성, 구조, 사용성 관련 의견</li>
+            <li>일반적인 사이트 운영 문의</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>이 사이트가 제공하지 않는 것</h2>
+          <h2>답변이 어려운 문의</h2>
           <ul class="list">
-            <li>법률 자문, 세무 자문, 관세사 상담과 같은 전문 대행 서비스</li>
-            <li>실제 통관 신고를 대신 제출하는 기능</li>
-            <li>최종 납부 세액을 확정해 주는 공식 판단</li>
+            <li>개별 물품에 대한 최종 통관 확정 판단</li>
+            <li>법률 자문, 세무 자문, 관세사 상담을 대신하는 답변</li>
+            <li>실제 신고나 납부를 대신 처리하는 요청</li>
+            <li>긴급 처리가 필요한 공식 민원 대행 요청</li>
           </ul>
         </article>
+      </div>
 
+      <div class="container" style="margin-top:18px;">
         <article class="card">
-          <h2>정보는 어떻게 구성되나요?</h2>
+          <h2>문의 방법</h2>
           <p>
-            이 사이트는 해외직구 이용자가 자주 궁금해하는 질문을 중심으로
-            안내성 콘텐츠를 구성합니다.
-            계산기는 참고용이며, 결과 해설과 가이드 문서를 함께 제공해
-            숫자만 보여주는 도구가 아니라 이해를 돕는 정보 페이지가 되도록 설계했습니다.
+            아래 이메일로 문의하실 수 있습니다.
+            메일 제목에 문의 주제를 간단히 적어 주시면 확인에 도움이 됩니다.
           </p>
+
+          <div class="mail-box">
+            <strong style="font-size:18px; color:#1f2937;">Contact: upshop79@gmail.com</strong>
+            <p style="margin-top:10px;">
+              예시 제목:
+              “FAQ 오탈자 제보”, “링크 오류 제보”, “가이드 주제 제안”, “사이트 개선 의견”
+            </p>
+          </div>
         </article>
 
-        <article class="card">
-          <h2>업데이트 방향</h2>
+        <article class="card" style="margin-top:18px;">
+          <h2>문의 전 참고해 주세요</h2>
           <p>
-            홈, FAQ, 가이드, 계산 기준, 공식 출처 페이지를 서로 연결해
-            사용자가 필요한 문서를 쉽게 찾을 수 있도록 유지합니다.
-            내용은 일반적인 이해를 돕는 범위에서 정리되며,
-            실제 판단이 필요한 경우에는 공식 안내 확인을 권장합니다.
+            본 사이트는 참고용 정보형 계산기이므로,
+            실제 통관 판단이나 최종 납부 세액은 공식 기관 안내와 실제 신고 결과를 따를 수 있습니다.
+            공식 기준 확인이 필요한 경우에는 사이트의 공식 출처 페이지도 함께 확인해 주세요.
           </p>
-        </article>
-
-        <article class="card">
-          <h2>문의 안내</h2>
-          <p>
-            사이트 내용 개선 제안, 오탈자 제보, 잘못 연결된 링크 제보, 일반적인 문의는
-            아래 이메일로 보내실 수 있습니다.
-          </p>
-          <p style="margin-top: 10px;"><strong style="color:#1f2937;">Contact: upshop79@gmail.com</strong></p>
         </article>
       </div>
     </section>

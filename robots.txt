@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://import-tax-calc.pages.dev/sitemap.xml

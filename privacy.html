@@ -1,50 +1,252 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보처리방침 | 해외직구 관부가세 계산기</title>
-    <link rel="canonical" href="https://import-tax-calc.pages.dev/privacy.html">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 | 해외직구 관부가세 계산기</title>
+  <meta
+    name="description"
+    content="해외직구 관부가세 계산기 사이트의 개인정보처리방침입니다. 문의 이메일, 쿠키, 로그 정보, 외부 링크 이용에 대한 기본 원칙을 안내합니다."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://import-tax-calc.pages.dev/privacy.html" />
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --soft: #ecfeff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 18px;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    a { color: var(--primary-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo { font-size: 20px; font-weight: 800; color: var(--text); }
+    .nav { display: flex; flex-wrap: wrap; gap: 14px; }
+    .nav a { font-size: 14px; font-weight: 600; color: var(--text); }
+    .hero {
+      padding: 56px 0 28px;
+      background: linear-gradient(180deg, #eefcf9 0%, #f7f8fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-card, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      background: var(--soft);
+      color: var(--primary-dark);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 4.5vw, 46px);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    p { margin: 0; color: var(--muted); }
+    .section { padding: 48px 0; }
+    .card + .card { margin-top: 18px; }
+    .list { padding-left: 18px; margin: 0; color: var(--muted); }
+    .list li + li { margin-top: 10px; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 12px;
+    }
+    footer {
+      padding: 32px 0 60px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+    .footer-desc, .footer-meta { color: var(--muted); }
+    .footer-meta { margin-top: 14px; font-size: 14px; }
+    @media (max-width: 860px) {
+      .header-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .hero-card, .card { padding: 22px; }
+    }
+  </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1>개인정보처리방침</h1>
-            <nav class="top-nav">
-                <a href="index.html">홈으로</a> | 
-                <a href="about.html">서비스 소개</a>
-            </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">해외직구 관부가세 계산기</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html">홈</a>
+        <a href="guides/index.html">가이드</a>
+        <a href="faq.html">FAQ</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="sources.html">공식 출처</a>
+        <a href="about.html">서비스 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+        <a href="contact.html">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow">개인정보처리방침</span>
+          <h1>개인정보 이용과 보호에 대한 기본 원칙</h1>
+          <p>
+            해외직구 관부가세 계산기는 이용자의 개인정보를 최소한으로 다루는 것을 원칙으로 합니다.
+            이 페이지는 사이트 이용 과정에서 어떤 정보가 처리될 수 있는지,
+            문의 이메일을 통한 연락 시 어떤 범위의 정보가 사용될 수 있는지 안내합니다.
+          </p>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main class="container">
-        <article class="seo-content">
-            <p>본 방침은 2026년 4월 23일부터 시행됩니다.</p>
-
-            <h3>1. 개인정보의 수집 및 이용</h3>
-            <p>'해외직구 관부가세 계산기'는 사용자가 입력한 물품 가격, 환율 등의 데이터를 서버에 저장하거나 수집하지 않습니다. 모든 계산 프로세스는 사용자의 브라우저 내(Client-side)에서 즉시 처리된 후 파기됩니다.</p>
-
-            <h3>2. 구글 애드센스 및 쿠키(Cookie) 사용 고지</h3>
-            <p>본 사이트는 구글(Google)에서 제공하는 광고 서비스인 '애드센스(Google AdSense)'를 사용합니다. 구글을 포함한 제3자 제공업체는 사용자가 본 웹사이트 또는 다른 웹사이트를 이전 방문한 기록을 바탕으로 광고를 게재하기 위해 쿠키를 사용합니다.</p>
-            <ul>
-                <li><strong>DART 쿠키:</strong> 구글은 DART 쿠키를 사용하여 본 사이트 및 인터넷상의 다른 사이트 방문 기록을 토대로 사용자에게 맞춤형 광고를 제공합니다.</li>
-                <li><strong>쿠키 거부:</strong> 사용자는 <a href="https://adssettings.google.com" target="_blank">구글 광고 설정</a> 페이지를 방문하여 맞춤 설정 광고를 거부할 수 있습니다.</li>
-            </ul>
-
-            <h3>3. 로그 파일 및 분석</h3>
-            <p>본 사이트는 표준적인 로그 파일이나 웹 로그 분석 도구(Google Analytics 등)를 사용하여 방문자의 IP 주소, 브라우저 유형, 방문 시간 등을 익명으로 수집할 수 있습니다. 이는 사이트의 트래픽 분석 및 서비스 개선을 위한 목적으로만 사용됩니다.</p>
-
-            <h3>4. 문의처</h3>
-            <p>개인정보 관련 문의사항은 아래 연락처로 문의해 주시기 바랍니다.</p>
-            <p>담당자 이메일: <strong>upshop79@gmail.com</strong></p>
+    <section class="section">
+      <div class="container">
+        <article class="card">
+          <h2>1. 기본 원칙</h2>
+          <p>
+            본 사이트는 회원가입, 결제, 직접적인 계정 생성 기능을 제공하지 않습니다.
+            사이트 운영 과정에서 이용자의 개인정보를 불필요하게 수집하지 않는 것을 원칙으로 합니다.
+          </p>
         </article>
-    </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>© 2026 해외직구 관부가세 계산기. All rights reserved.</p>
-        </div>
-    </footer>
+        <article class="card">
+          <h2>2. 수집할 수 있는 정보</h2>
+          <ul class="list">
+            <li>이용자가 문의 이메일을 보낼 경우 이메일 주소와 문의 내용</li>
+            <li>호스팅 서비스나 서버 로그를 통해 자동으로 생성될 수 있는 비식별 접속 정보</li>
+            <li>브라우저 환경에 따라 저장될 수 있는 기본적인 쿠키 또는 유사 기술 정보</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>3. 정보 이용 목적</h2>
+          <ul class="list">
+            <li>이용자 문의에 대한 회신</li>
+            <li>사이트 오류 확인 및 기본적인 운영 안정성 점검</li>
+            <li>콘텐츠 품질 개선과 링크 오류 수정</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>4. 이메일 문의 처리</h2>
+          <p>
+            이용자가 문의를 위해 이메일을 보낼 경우,
+            회신을 위해 이메일 주소와 문의 내용이 이메일 서비스 제공자를 통해 처리될 수 있습니다.
+            해당 정보는 문의 응대 목적 범위에서만 사용하며,
+            관련 법령상 보관 의무가 없는 한 장기간 별도로 축적하지 않는 것을 원칙으로 합니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>5. 쿠키 및 로그 정보</h2>
+          <p>
+            사이트가 사용하는 호스팅 환경, 기본 웹 서버 설정, 트래픽 측정 도구 등에 따라
+            접속 기록, 브라우저 종류, 방문 시각, 참조 URL, 기기 환경 등의 정보가 자동 생성될 수 있습니다.
+            이러한 정보는 통상적인 서비스 제공과 안정성 유지 목적 범위에서 활용될 수 있습니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>6. 제3자 서비스와 외부 링크</h2>
+          <p>
+            본 사이트는 공식 출처 안내를 위해 외부 사이트 링크를 제공할 수 있습니다.
+            외부 사이트에서의 개인정보 처리 방식은 해당 사이트의 정책을 따르며,
+            본 사이트는 외부 사이트의 별도 개인정보 처리에 대해 직접 통제하지 않습니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>7. 개인정보 보호 관련 문의</h2>
+          <p>
+            개인정보 처리와 관련한 문의가 있으면 아래 이메일로 연락해 주세요.
+          </p>
+          <p style="margin-top: 10px;"><strong style="color:#1f2937;">Contact: upshop79@gmail.com</strong></p>
+        </article>
+
+        <article class="card">
+          <h2>8. 정책 변경 안내</h2>
+          <p>
+            본 방침은 사이트 운영 방식 변경, 법령 변화, 기능 추가 등에 따라 수정될 수 있습니다.
+            중요한 변경이 있는 경우 이 페이지의 내용을 업데이트합니다.
+          </p>
+          <p style="margin-top: 10px;"><strong style="color:#1f2937;">최종 업데이트: 2026-04-23</strong></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong style="font-size: 18px;">해외직구 관부가세 계산기</strong>
+      <p class="footer-desc">
+        해외직구 시 발생할 수 있는 예상 관세와 부가세를
+        초보자도 이해하기 쉽게 정리한 참고용 정보형 계산기입니다.
+      </p>
+
+      <div class="footer-links">
+        <a href="index.html">홈</a>
+        <a href="guides/index.html">가이드</a>
+        <a href="faq.html">FAQ</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="sources.html">공식 출처</a>
+        <a href="about.html">서비스 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+        <a href="contact.html">문의하기</a>
+      </div>
+
+      <div class="footer-meta">
+        <div>Contact: upshop79@gmail.com</div>
+        <div>© 2026 해외직구 관부가세 계산기. All rights reserved.</div>
+        <div>최종 업데이트: 2026-04-23</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

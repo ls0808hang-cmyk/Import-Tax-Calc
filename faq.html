@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>해외직구 관부가세 FAQ | 자주 묻는 질문 총정리</title>
+  <meta
+    name="description"
+    content="해외직구 관부가세, 목록통관, 일반통관, 합산과세, 배송비 포함 여부, 개인통관고유부호 등 자주 묻는 질문을 한 곳에 정리했습니다."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://import-tax-calc.pages.dev/faq/" />
+  <meta property="og:title" content="해외직구 관부가세 FAQ" />
+  <meta
+    property="og:description"
+    content="해외직구 세금 계산 전에 많이 묻는 질문을 초보자도 이해하기 쉽게 정리했습니다."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://import-tax-calc.pages.dev/faq/" />
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --soft: #ecfeff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--primary-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo { font-size: 20px; font-weight: 800; color: var(--text); }
+    .nav { display: flex; flex-wrap: wrap; gap: 14px; }
+    .nav a { font-size: 14px; font-weight: 600; color: var(--text); }
+    .hero {
+      padding: 56px 0 28px;
+      background: linear-gradient(180deg, #eefcf9 0%, #f7f8fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-card, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      background: var(--soft);
+      color: var(--primary-dark);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 4.5vw, 46px);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+    }
+    .hero p { margin: 0; color: var(--muted); }
+    .section { padding: 56px 0; }
+    .section-header { margin-bottom: 20px; }
+    .section-header h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .section-header p { margin: 0; color: var(--muted); }
+    .faq-list { display: grid; gap: 16px; }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 22px;
+      font-weight: 800;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-answer {
+      padding: 0 22px 22px;
+      color: var(--muted);
+    }
+    .guide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .pill-link:hover { background: #f8fafc; text-decoration: none; }
+    footer {
+      padding: 32px 0 60px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 12px;
+    }
+    .footer-desc, .footer-meta { color: var(--muted); }
+    .footer-meta { margin-top: 14px; font-size: 14px; }
+    @media (max-width: 860px) {
+      .header-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .hero-card, .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">해외직구 관부가세 계산기</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html">홈</a>
+        <a href="guides/index.html">가이드</a>
+        <a href="faq.html">FAQ</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="sources.html">공식 출처</a>
+        <a href="about.html">서비스 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+        <a href="contact.html">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow">자주 묻는 질문 모음</span>
+          <h1>해외직구 관부가세 FAQ</h1>
+          <p>
+            해외직구 세금 계산 전에 자주 헷갈리는 질문을 한 곳에 정리했습니다.
+            선물, 중고품, 배송비 포함 여부, 합산과세, 개인통관고유부호처럼
+            실제 구매 전에 많이 묻는 내용을 초보자도 이해하기 쉽게 설명합니다.
+          </p>
+          <div class="guide-links">
+            <a class="pill-link" href="index.html">계산기로 돌아가기</a>
+            <a class="pill-link" href="guides/index.html">가이드 전체 보기</a>
+            <a class="pill-link" href="methodology.html">계산 기준 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>자주 묻는 질문</h2>
+          <p>
+            아래 답변은 일반적인 이해를 돕기 위한 안내입니다.
+            실제 통관 결과는 품목, 신고 내용, 적용 환율, 통관 방식에 따라 달라질 수 있습니다.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <details open>
+              <summary>선물도 관부가세 대상이 되나요?</summary>
+              <div class="faq-answer">
+                선물이라고 해서 항상 면세되는 것은 아닙니다.
+                물품의 실제 가치와 통관 기준에 따라 과세될 수 있으며,
+                신고 금액이나 품목 특성에 따라 결과가 달라질 수 있습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>중고 물품도 세금이 붙나요?</summary>
+              <div class="faq-answer">
+                중고 여부만으로 과세가 사라지지는 않습니다.
+                실제 거래가액, 물품 종류, 신고 방식에 따라 과세 여부가 판단될 수 있습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>국제배송비도 세금 계산에 포함되나요?</summary>
+              <div class="faq-answer">
+                일부 상황에서는 과세가격 판단에 국제배송비나 기타 운임 요소가 반영될 수 있습니다.
+                따라서 물품 가격만 입력하기보다 실제 결제 구조를 최대한 정확하게 넣는 편이 좋습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>현지 배송비와 현지 세금도 확인해야 하나요?</summary>
+              <div class="faq-answer">
+                네. 결제 구조에 따라 현지 세금, 현지 배송비, 보험료 등이 기준 판단에 영향을 줄 수 있습니다.
+                직구 사이트 결제 화면에 표시된 전체 구조를 함께 보는 것이 안전합니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>미국 200달러 기준과 기타 국가 150달러 기준은 어떻게 이해하면 되나요?</summary>
+              <div class="faq-answer">
+                많은 사용자가 미국 직구와 기타 국가 직구에서 서로 다른 기준 금액을 기억하지만,
+                실제로는 품목과 통관 방식에 따라 확인해야 할 조건이 달라질 수 있습니다.
+                금액만 보고 단정하지 말고 통관 유형까지 함께 보는 것이 좋습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>목록통관과 일반통관은 무엇이 다른가요?</summary>
+              <div class="faq-answer">
+                통관 방식에 따라 적용 기준과 절차가 달라질 수 있습니다.
+                같은 금액이라도 품목 특성상 일반통관으로 처리되면 판단 기준이 달라질 수 있으므로,
+                품목별 안내를 함께 확인하는 편이 좋습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>합산과세는 언제 생기나요?</summary>
+              <div class="faq-answer">
+                여러 번 나눠 주문했더라도 같은 시점에 입항하거나 통관 조건이 겹치면
+                합산과세가 적용될 수 있습니다.
+                단순히 주문을 나누는 것만으로 항상 안전해지는 것은 아닙니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>개인통관고유부호는 꼭 필요한가요?</summary>
+              <div class="faq-answer">
+                해외직구 통관 과정에서 본인 확인과 물품 처리에 필요한 경우가 많습니다.
+                자주 직구하는 경우라면 미리 준비해 두는 것이 편리합니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>환율은 결제 시점 기준인가요, 통관 시점 기준인가요?</summary>
+              <div class="faq-answer">
+                사용자가 체감하는 금액과 실제 통관 시 적용되는 기준은 다를 수 있습니다.
+                따라서 계산기에서 보는 값과 실제 납부 세액은 차이가 발생할 수 있습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>화장품이나 식품도 같은 방식으로 보면 되나요?</summary>
+              <div class="faq-answer">
+                아닙니다. 품목에 따라 통관 방식과 유의사항이 달라질 수 있습니다.
+                특히 화장품, 식품, 전자기기처럼 자주 구매하는 품목은 별도 가이드를 함께 보는 것이 좋습니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>전자기기는 무조건 무관세인가요?</summary>
+              <div class="faq-answer">
+                전자기기라고 해서 모든 상황이 동일하게 처리되는 것은 아닙니다.
+                물품 종류와 분류에 따라 관세 구조가 달라질 수 있으므로 품목별 안내를 확인해야 합니다.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>계산기 결과와 실제 납부 세액이 다를 수 있나요?</summary>
+              <div class="faq-answer">
+                네. 이 사이트의 결과는 참고용 계산값입니다.
+                실제 신고 내용, 통관 방식, 환율 적용 시점, 배송비·보험료 반영 여부 등에 따라 실제 세액은 달라질 수 있습니다.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="guide-links" style="margin-top: 24px;">
+          <a class="pill-link" href="guides/us-200-vs-150.html">면세 기준 차이 보기</a>
+          <a class="pill-link" href="guides/list-clearance-vs-import.html">목록통관·일반통관 보기</a>
+          <a class="pill-link" href="guides/combined-taxation.html">합산과세 가이드 보기</a>
+          <a class="pill-link" href="guides/pccc-guide.html">개인통관고유부호 보기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong style="font-size: 18px;">해외직구 관부가세 계산기</strong>
+      <p class="footer-desc">
+        해외직구 시 발생할 수 있는 예상 관세와 부가세를
+        초보자도 이해하기 쉽게 정리한 참고용 정보형 계산기입니다.
+      </p>
+
+      <div class="footer-links">
+        <a href="index.html">홈</a>
+        <a href="guides/index.html">가이드</a>
+        <a href="faq.html">FAQ</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="sources.html">공식 출처</a>
+        <a href="about.html">서비스 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+        <a href="contact.html">문의하기</a>
+      </div>
+
+      <div class="footer-meta">
+        <div>Contact: upshop79@gmail.com</div>
+        <div>© 2026 해외직구 관부가세 계산기. All rights reserved.</div>
+        <div>최종 업데이트: 2026-04-23</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

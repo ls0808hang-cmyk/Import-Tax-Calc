@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계산 기준 | 해외직구 관부가세 계산기</title>
+  <meta name="description" content="해외직구 관부가세 계산기가 어떤 입력값과 논리로 참고용 결과를 보여주는지 설명합니다." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://import-tax-calc.pages.dev/methodology.html" />
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--soft:#ecfeff;--shadow:0 10px 30px rgba(15,23,42,.06);--max:980px}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+    a{color:#115e59;text-decoration:none} a:hover{text-decoration:underline} .container{width:min(100% - 32px,var(--max));margin:0 auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)} .header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:20px;font-weight:800;color:var(--text)} .nav{display:flex;flex-wrap:wrap;gap:14px}.nav a{font-size:14px;font-weight:600;color:var(--text)}
+    .hero{padding:56px 0 28px;background:linear-gradient(180deg,#eefcf9 0%,#f7f8fb 100%);border-bottom:1px solid var(--line)} .hero-card,.card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:28px}
+    .eyebrow{display:inline-block;margin-bottom:12px;background:var(--soft);color:#115e59;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700} h1{margin:0 0 14px;font-size:clamp(30px,4.5vw,46px);line-height:1.18;letter-spacing:-.03em} h2{margin:0 0 12px;font-size:28px;line-height:1.2}
+    p{margin:0;color:var(--muted)} .section{padding:48px 0}.card + .card{margin-top:18px}.list{padding-left:18px;margin:0;color:var(--muted)} .list li+li{margin-top:10px}
+    .links,.footer-links{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:16px}.pill{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;color:var(--text)}
+    footer{padding:32px 0 60px;border-top:1px solid var(--line);background:#fff}.footer-desc,.footer-meta{color:var(--muted)} .footer-meta{margin-top:14px;font-size:14px}
+    @media (max-width:860px){.header-inner{flex-direction:column;align-items:flex-start;padding:14px 0}.hero-card,.card{padding:22px}}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">해외직구 관부가세 계산기</a><nav class="nav"><a href="index.html">홈</a><a href="guides/index.html">가이드</a><a href="faq.html">FAQ</a><a href="methodology.html">계산 기준</a><a href="sources.html">공식 출처</a><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a><a href="contact.html">문의하기</a></nav></div></header>
+<main>
+<section class="hero"><div class="container"><div class="hero-card"><span class="eyebrow">계산 기준 안내</span><h1>이 계산기는 어떤 방식으로 참고 결과를 보여주나요?</h1><p>이 페이지는 홈의 계산기가 어떤 입력값을 받고, 어떤 흐름으로 참고용 예상세액을 보여주는지 이해하기 쉽게 설명합니다. 실제 세액 확정이 아니라 “구매 전 감을 잡는 도구”라는 점을 먼저 기억해 주세요.</p></div></div></section>
+<section class="section"><div class="container">
+<article class="card"><h2>입력값</h2><ul class="list"><li>발송 국가</li><li>품목</li><li>물품 가격</li><li>발송국가 내 세금</li><li>발송국가 내 배송비</li><li>국제배송비</li><li>보험료</li><li>환율</li></ul></article>
+<article class="card"><h2>왜 이렇게 세분화했나요?</h2><p>해외직구 세금은 물품 가격 하나만으로 체감하기 어렵기 때문입니다. 관세청 안내에서도 물품가격 판단과 과세가격 설명에서 여러 비용 요소를 함께 보게 되므로, 사용자도 결제 구조를 더 현실적으로 입력하는 편이 좋습니다.</p></article>
+<article class="card"><h2>이 계산기의 역할</h2><p>이 계산기는 구매 전에 “대략 어느 정도를 예상해야 하는지”를 보는 참고 도구입니다. 금액이 기준선 근처인지, 배송비를 포함하면 체감이 어떻게 달라지는지, 세금이 붙는 경우 총 비용이 어느 정도인지 감을 잡는 데 초점을 둡니다.</p></article>
+<article class="card"><h2>결과가 실제와 달라질 수 있는 이유</h2><ul class="list"><li>통관 시점 환율 반영 차이</li><li>품목 분류 차이</li><li>배송비·보험료 반영 방식 차이</li><li>통관 방식 차이</li><li>같은 시기 입항에 따른 합산과세 가능성</li></ul></article>
+<article class="card"><h2>이 페이지의 핵심 한 줄</h2><p>홈 계산기는 “최종 확정값”이 아니라 “구매 전 판단을 돕는 참고용 예상 도구”입니다.</p><div class="links"><a class="pill" href="sources.html">공식 출처 보기</a><a class="pill" href="guides/index.html">가이드 보기</a><a class="pill" href="index.html">계산기로 돌아가기</a></div></article>
+</div></section>
+</main>
+<footer><div class="container"><strong style="font-size:18px;">해외직구 관부가세 계산기</strong><p class="footer-desc">해외직구 시 발생할 수 있는 예상 관세와 부가세를 초보자도 이해하기 쉽게 정리한 참고용 정보형 계산기입니다.</p><div class="footer-links"><a href="index.html">홈</a><a href="guides/index.html">가이드</a><a href="faq.html">FAQ</a><a href="methodology.html">계산 기준</a><a href="sources.html">공식 출처</a><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a><a href="contact.html">문의하기</a></div><div class="footer-meta"><div>Contact: upshop79@gmail.com</div><div>© 2026 해외직구 관부가세 계산기. All rights reserved.</div><div>최종 업데이트: 2026-04-23</div></div></div></footer>
+</body>
+</html>
