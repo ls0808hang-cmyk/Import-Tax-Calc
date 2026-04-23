@@ -26,6 +26,8 @@ A web-based calculator designed to help users estimate import taxes (Duty and VA
   - Provides a total estimated payment in KRW.
 - **About Page:** Provides service information, expertise, and contact details.
 - **Privacy Policy Page:** Details data collection practices, AdSense usage, and privacy guidelines.
+- **Tax Rate Table:** Detailed breakdown of duty rates for common items like clothing, electronics, and cosmetics.
+- **FAQ Section:** Answers common user questions about gifts, combined taxation, and second-hand goods.
 - **SEO Optimized Content:** Includes a detailed guide on import tax rules (List clearance vs. General clearance, 합산과세, etc.).
 
 ## Current Plan: Initial Implementation

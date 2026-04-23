@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>해외직구 관부가세 계산기 | 품목별/국가별 세금 자동 산출</title>
-    <meta name="description" content="미국, 유럽, 일본 등 해외직구 시 발생하는 관세와 부가세를 클릭 한 번으로 계산하세요. 2026년 최신 면세 한도와 목록통관, 일반통관 차이점 완벽 가이드.">
-    <link rel="canonical" href="본인의_웹사이트_URL을_입력하세요">
+    <title>해외직구 관부가세 계산기 | 2026년 최신 품목별 세율 및 가이드</title>
+    <meta name="description" content="미국, 유럽, 일본 해외직구 시 발생하는 관세와 부가세를 정확하게 계산하세요. 품목별 상세 세율표와 목록통관/일반통관 완벽 정리 가이드 포함.">
+    <link rel="canonical" href="https://import-tax-calc.pages.dev/">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <h1>해외직구 관부가세 계산기</h1>
-            <p>복잡한 직구 세금, 단 3초 만에 예상 금액을 확인하세요.</p>
+            <p>2026년 최신 관세법 기준, 직구 세금 고민을 해결해 드립니다.</p>
             <nav class="top-nav">
-                <a href="about.html">소개</a> | 
+                <a href="index.html"><strong>홈</strong></a> | 
+                <a href="about.html">서비스 소개</a> | 
                 <a href="privacy.html">개인정보처리방침</a>
             </nav>
         </div>
@@ -22,12 +23,12 @@
 
     <main class="container">
         <div class="ads-slot top-ad">
-            <span class="ads-label">Advertisement</span>
+            <span class="ads-label">ADVERTISEMENT</span>
         </div>
 
         <section class="calculator-wrapper">
             <div class="input-group">
-                <label for="country">1. 구매 국가</label>
+                <label for="country">1. 발송 국가 선택</label>
                 <select id="country">
                     <option value="us">미국 (목록통관 $200 이하 면세)</option>
                     <option value="other">기타 국가 (유럽/일본/중국 등 $150 이하 면세)</option>
@@ -35,71 +36,119 @@
             </div>
 
             <div class="input-group">
-                <label for="category">2. 구매 품목</label>
+                <label for="category">2. 구매 품목 (주요 품목별 세율)</label>
                 <select id="category">
-                    <option value="13">의류 / 신발 (관세 13%)</option>
-                    <option value="8">일반 전자기기 / 가전 (관세 8%)</option>
-                    <option value="0">컴퓨터 / 스마트폰 / 태블릿 (관세 0%)</option>
-                    <option value="8">화장품 / 향수 (관세 8%)</option>
-                    <option value="0">서적 / 인쇄물 (관세 0%)</option>
+                    <option value="13">의류 및 신발 (기본 13%)</option>
+                    <option value="8">가전제품 / 전자기기 (기본 8%)</option>
+                    <option value="0">컴퓨터 / 노트북 / 스마트폰 (0%)</option>
+                    <option value="6.5">기초 화장품 (6.5%)</option>
+                    <option value="20">기타 잡화 (최대 20%)</option>
                 </select>
             </div>
 
             <div class="input-group row-flex">
                 <div class="half-width">
-                    <label for="price">3. 물품 총액 (USD 달러)</label>
-                    <input type="number" id="price" placeholder="예: 180" min="0">
+                    <label for="price">3. 총 구매 금액 (USD)</label>
+                    <input type="number" id="price" placeholder="예: 185" min="0">
                 </div>
                 <div class="half-width">
-                    <label for="exchangeRate">4. 적용 환율 (원)</label>
+                    <label for="exchangeRate">4. 현재 환율 (KRW)</label>
                     <input type="number" id="exchangeRate" placeholder="예: 1350" min="0">
                 </div>
             </div>
 
-            <button id="calcBtn" class="calc-btn">예상 관부가세 계산하기</button>
+            <button id="calcBtn" class="calc-btn">나의 예상 세금 확인하기</button>
 
             <div id="resultArea" class="result-box hidden">
-                <h3>계산 결과</h3>
-                <p>면세 여부: <strong id="taxExemptStatus" class="highlight"></strong></p>
+                <h3>예상 관부가세 산출 결과</h3>
+                <p>구분: <strong id="taxExemptStatus"></strong></p>
                 <ul>
-                    <li>물품 가액: <span id="resPrice">0</span>원</li>
+                    <li>물품 가액(원화): <span id="resPrice">0</span>원</li>
                     <li>예상 관세: <span id="resDuty">0</span>원</li>
                     <li>예상 부가세: <span id="resVat">0</span>원</li>
                 </ul>
                 <div class="total-price">
-                    최종 예상 결제액: <strong id="resTotal">0</strong>원
+                    총 예상 수령 비용: <strong id="resTotal">0</strong>원
                 </div>
-                <p class="disclaimer">* 본 결과는 참고용이며, 실제 통관 시 부과되는 세금(배송비 포함 여부, 고시환율 등)과 차이가 있을 수 있습니다.</p>
+                <p class="disclaimer">* 실제 납부 세액은 통관 시점의 고시환율 및 배송비 포함 여부에 따라 달라질 수 있습니다.</p>
             </div>
         </section>
 
         <div class="ads-slot bottom-ad">
-            <span class="ads-label">Advertisement</span>
+            <span class="ads-label">ADVERTISEMENT</span>
         </div>
 
         <article class="seo-content">
-            <h2>해외직구 전 필수 확인! 관부가세 핵심 가이드</h2>
-            
-            <h3>1. 국가별 면세 한도 차이점</h3>
-            <p>해외직구를 할 때 가장 먼저 확인해야 할 것은 '어느 나라에서 구매하는가'입니다. 현재 대한민국 관세법에 따르면, <strong>미국에서 출발하는 목록통관 물품의 경우 미화 200달러까지 면세</strong> 혜택을 받을 수 있습니다. 반면, 영국, 독일, 일본, 중국 등 <strong>미국을 제외한 모든 국가에서 구매하는 물품은 미화 150달러까지만 면세</strong>가 적용됩니다. 단 1달러라도 한도를 초과하면 초과분이 아닌 '물품 전체 금액'에 대해 세금이 부과되므로 결제 전 반드시 총액을 확인해야 합니다.</p>
+            <h2>2026 해외직구 관부가세 완벽 가이드</h2>
+            <p>해외직구 시 세금은 '물품 가격'뿐만 아니라 '현지 배송비', '현지 세금'을 모두 합산한 금액을 기준으로 결정됩니다. 아래의 가이드를 통해 세금 폭탄을 피하는 전략을 세워보세요.</p>
 
-            <h3>2. 목록통관과 일반통관이란?</h3>
-            <p>모든 직구 물품이 200달러(미국) 또는 150달러(기타 국가) 면세 혜택을 받는 것은 아닙니다. 통관 방식은 크게 두 가지로 나뉩니다.</p>
+            <h3>1. 주요 품목별 관세율 일람표</h3>
+            <p>품목에 따라 관세율은 0%에서 20% 이상까지 다양하게 적용됩니다.</p>
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem;">
+                <tr style="background:#f1f5f9;">
+                    <th style="padding:10px; border:1px solid #ddd;">품목 구분</th>
+                    <th style="padding:10px; border:1px solid #ddd;">관세율</th>
+                    <th style="padding:10px; border:1px solid #ddd;">부가세율</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">의류, 양말, 가방</td>
+                    <td style="padding:10px; border:1px solid #ddd;">13%</td>
+                    <td style="padding:10px; border:1px solid #ddd;">10%</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">신발</td>
+                    <td style="padding:10px; border:1px solid #ddd;">13%</td>
+                    <td style="padding:10px; border:1px solid #ddd;">10%</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">노트북, 태블릿, 휴대폰</td>
+                    <td style="padding:10px; border:1px solid #ddd;"><strong>0% (무관세)</strong></td>
+                    <td style="padding:10px; border:1px solid #ddd;">10%</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">기초 화장품</td>
+                    <td style="padding:10px; border:1px solid #ddd;">6.5%</td>
+                    <td style="padding:10px; border:1px solid #ddd;">10%</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">커피, 차(Tea)</td>
+                    <td style="padding:10px; border:1px solid #ddd;">8%</td>
+                    <td style="padding:10px; border:1px solid #ddd;">10% (면세대상 확인필요)</td>
+                </tr>
+            </table>
+
+            <h3>2. 면세 한도 결정의 핵심: 목록통관 vs 일반통관</h3>
+            <p>직구 물품은 통관 방식에 따라 면세 기준이 다릅니다.</p>
             <ul>
-                <li><strong>목록통관:</strong> 개인이 자가 사용 목적으로 수입하는 물품 중, 송장 내용만으로 통관이 가능한 품목입니다. (예: 의류, 신발, 서적 등)</li>
-                <li><strong>일반통관:</strong> 국민 건강이나 안전과 직결되어 세관의 정식 수입신고 절차와 검사가 필요한 품목입니다. (예: 건강기능식품, 의약품, 향수, 식품류 등)</li>
+                <li><strong>목록통관:</strong> 개인이 사용할 용도의 서적, 의류, 신발 등으로 미국 기준 <strong>$200</strong>까지 면세됩니다.</li>
+                <li><strong>일반통관:</strong> 의약품, 식품, 향수, 한약재 등 까다로운 검사가 필요한 품목으로 미국 포함 전 국가 <strong>$150</strong>까지 면세됩니다.</li>
             </ul>
-            <p>주의할 점은 <strong>일반통관 품목은 미국에서 구매하더라도 면세 한도가 150달러로 축소</strong>된다는 것입니다. 만약 장바구니에 목록통관 물품 190달러치와 일반통관 물품 10달러치가 함께 섞여 있다면, 전체가 일반통관 기준으로 처리되어 세금 폭탄을 맞을 수 있습니다.</p>
+            <p><em>※ 주의: 목록통관 품목이라 하더라도 수량이 과하거나 재판매 목적으로 의심될 경우 일반통관으로 전환되어 과세될 수 있습니다.</em></p>
 
-            <h3>3. 합산과세 주의사항</h3>
-            <p>서로 다른 날짜에, 서로 다른 쇼핑몰에서 주문했더라도 <strong>같은 날짜에 대한민국 세관에 입항하게 되면 두 물품의 가격이 합산</strong>되어 과세 기준을 넘길 수 있습니다. 이를 '합산과세'라고 합니다. 따라서 여러 쇼핑몰에서 직구할 때는 첫 번째 물품이 국내 세관을 통과한 것을 확인한 후, 두 번째 물품을 결제하거나 배송을 출발시키는 것이 가장 안전한 절세 방법입니다.</p>
+            <h3>3. 관부가세 계산 공식 (전문 지식)</h3>
+            <p>관세와 부가세는 다음과 같은 산식으로 계산됩니다.</p>
+            <div style="background:#f8fafc; padding:20px; border-left:5px solid #2563eb; margin:15px 0;">
+                <p><strong>① 관세</strong> = 과세가격(물품값+현지배송비+보험료 등) × 품목별 관세율</p>
+                <p><strong>② 부가세</strong> = (과세가격 + 관세) × 10%</p>
+                <p><strong>③ 총 납부세액</strong> = 관세 + 부가세</p>
+            </div>
+
+            <h3>4. 자주 묻는 질문 (FAQ)</h3>
+            <div style="margin-top:20px;">
+                <p><strong>Q1. 선물을 받았는데 세금을 내야 하나요?</strong><br>
+                A. 네, 선물이라 하더라도 물품의 가치가 면세 한도($150~$200)를 초과하면 수령인이 관부가세를 납부해야 합니다.</p>
+                <p><strong>Q2. 합산과세 피하려면 어떻게 해야 하나요?</strong><br>
+                A. 각기 다른 날 주문했어도 입항일(비행기가 한국에 들어오는 날)이 같으면 합산됩니다. 안전하게 이전 주문 건이 '통관 완료'된 것을 확인한 후 다음 주문의 배송을 시작하세요.</p>
+                <p><strong>Q3. 중고 물품도 세금이 붙나요?</strong><br>
+                A. 중고 여부와 상관없이 물품의 실제 가액을 기준으로 세금이 산정됩니다. 허위로 가격을 낮게 적을 경우 언더밸류로 처벌받을 수 있으니 주의하세요.</p>
+            </div>
         </article>
     </main>
 
     <footer class="site-footer">
         <div class="container">
             <p>© 2026 해외직구 관부가세 계산기. All rights reserved.</p>
-            <p>본 사이트의 정보는 법적 효력을 갖지 않으며, 정확한 관세 정보는 관세청(Customs) 홈페이지를 참조하시기 바랍니다.</p>
+            <p>Contact: <a href="mailto:upshop79@gmail.com">upshop79@gmail.com</a></p>
         </div>
     </footer>
     <script src="main.js"></script>
