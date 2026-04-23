@@ -6,29 +6,26 @@ A web-based calculator designed to help users estimate import taxes (Duty and VA
 ## Project Documentation
 
 ### Style & Design
-- **Modern & Clean UI:** Uses a refined, card-based layout with box-shadows and subtle borders for a clean, modern look.
+- **Modern Landing Page UI:** Uses a structured, sectioned layout with hero sections, benefit cards, and interactive FAQs.
 - **Typography:** Uses 'Pretendard' for a premium Korean web experience.
 - **Color Palette:**
   - Primary: `#2563eb` (Blue)
-  - Primary Hover: `#1d4ed8`
-  - Background: `#f8fafc` (Light grey-blue)
+  - Secondary: `#dbeafe` (Light Blue)
+  - Background: `#ffffff`
   - Text: `#334155` (Slate)
-  - Highlight: `#e11d48` (Rose red)
-- **Responsive Design:** Mobile-first approach using media queries for vertical stacking on small screens.
+  - Success: `#16a34a` (Green)
+  - Error: `#e11d48` (Rose red)
+- **Responsive Design:** Mobile-first approach using CSS Grid and Flexbox for adaptive layouts on any screen size.
 
 ### Features
-- **Country Selection:** Different exemption limits for USA ($200) vs. other countries ($150).
-- **Category Selection:** Pre-defined duty rates for common items (Clothing, Electronics, Cosmetics, Books, etc.).
-- **Real-time Input:** Fields for USD price and current exchange rate.
-- **Tax Calculation:** 
-  - Automatically determines exemption status.
-  - Calculates Duty (관세) and VAT (부가세) based on the entire amount if the limit is exceeded.
-  - Provides a total estimated payment in KRW.
-- **About Page:** Provides service information, expertise, and contact details.
-- **Privacy Policy Page:** Details data collection practices, AdSense usage, and privacy guidelines.
-- **Tax Rate Table:** Detailed breakdown of duty rates for common items like clothing, electronics, and cosmetics.
-- **FAQ Section:** Answers common user questions about gifts, combined taxation, and second-hand goods.
-- **SEO Optimized Content:** Includes a detailed guide on import tax rules (List clearance vs. General clearance, 합산과세, etc.).
+- **Hero Section:** Clear value proposition and direct access to the calculator.
+- **Calculator:** Real-time import tax estimator with support for US ($200) and other countries ($150).
+- **Result Explainer:** Detailed breakdown of why specific taxes were applied based on Korean customs law.
+- **Summary Rules & Guides:** Quick educational content for first-time shoppers.
+- **Examples Section:** Real-world calculation scenarios to guide user expectations.
+- **FAQ Section:** Comprehensive answers to common import tax questions using expandable accordions.
+- **About & Privacy Pages:** Separate pages for detailed service information and data privacy guidelines.
+- **SEO Optimized Content:** Strategically placed content to improve search visibility.
 
 ## Current Plan: Initial Implementation
 1.  **HTML Structure:** Define the input form, result area, and SEO content sections.

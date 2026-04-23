@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoryRate = parseFloat(document.getElementById('category').value) / 100;
         const priceUSD = parseFloat(document.getElementById('price').value);
         const exchangeRate = parseFloat(document.getElementById('exchangeRate').value);
+        const logicText = document.getElementById('logic-text');
 
         // 입력값 검증
         if (!priceUSD || !exchangeRate || priceUSD <= 0 || exchangeRate <= 0) {
@@ -28,11 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (priceUSD <= taxFreeLimit) {
             // 면세 대상
             isTaxExempt = true;
+            if (logicText) {
+                logicText.innerHTML = `현재 구매 금액(<strong>$${priceUSD}</strong>)이 ${country === 'us' ? '미국' : '해당 국가'} 면세 한도(<strong>$${taxFreeLimit}</strong>) 이하이므로 <strong>관세와 부가세가 모두 면제</strong>되었습니다.`;
+            }
         } else {
             // 과세 대상 (관세 = 원화금액 * 관세율)
             duty = priceKRW * categoryRate;
             // 부가세 = (원화금액 + 관세) * 10%
             vat = (priceKRW + duty) * 0.1;
+
+            if (logicText) {
+                logicText.innerHTML = `구매 금액(<strong>$${priceUSD}</strong>)이 면세 한도(<strong>$${taxFreeLimit}</strong>)를 초과하여 <strong>과세 대상으로 분류</strong>되었습니다. 선택하신 품목의 관세율(<strong>${(categoryRate * 100).toFixed(1)}%</strong>)과 부가세(<strong>10%</strong>)가 적용되었습니다.`;
+            }
         }
 
         // 결과 화면 출력 포맷팅
@@ -51,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 결과 박스 보이기 (애니메이션 효과)
         const resultArea = document.getElementById('resultArea');
         resultArea.classList.remove('hidden');
-        resultArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Smooth scroll to results
+        setTimeout(() => {
+            resultArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
     });
 });
