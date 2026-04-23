@@ -6,26 +6,24 @@ A web-based calculator designed to help users estimate import taxes (Duty and VA
 ## Project Documentation
 
 ### Style & Design
-- **Modern Landing Page UI:** Uses a structured, sectioned layout with hero sections, benefit cards, and interactive FAQs.
-- **Typography:** Uses 'Pretendard' for a premium Korean web experience.
+- **Premium Professional UI:** Uses a high-end, clean, and modern design with a teal (`#0f766e`) and slate palette.
+- **Typography:** Optimized for readability with a mix of sans-serif and Noto Sans KR.
 - **Color Palette:**
-  - Primary: `#2563eb` (Blue)
-  - Secondary: `#dbeafe` (Light Blue)
-  - Background: `#ffffff`
-  - Text: `#334155` (Slate)
-  - Success: `#16a34a` (Green)
-  - Error: `#e11d48` (Rose red)
-- **Responsive Design:** Mobile-first approach using CSS Grid and Flexbox for adaptive layouts on any screen size.
+  - Primary: `#0f766e` (Teal)
+  - Primary Dark: `#115e59`
+  - Soft Backgrounds: `#f7f8fb`, `#ecfeff`
+  - Text: `#1f2937` (Dark Gray)
+  - Muted Text: `#6b7280` (Gray)
+- **Responsive Layout:** Uses CSS Grid and Flexbox for a seamless experience across desktop and mobile.
 
 ### Features
-- **Hero Section:** Clear value proposition and direct access to the calculator.
-- **Calculator:** Real-time import tax estimator with support for US ($200) and other countries ($150).
-- **Result Explainer:** Detailed breakdown of why specific taxes were applied based on Korean customs law.
-- **Summary Rules & Guides:** Quick educational content for first-time shoppers.
-- **Examples Section:** Real-world calculation scenarios to guide user expectations.
-- **FAQ Section:** Comprehensive answers to common import tax questions using expandable accordions.
-- **About & Privacy Pages:** Separate pages for detailed service information and data privacy guidelines.
-- **SEO Optimized Content:** Strategically placed content to improve search visibility.
+- **Hero Grid:** Engaging top section with quick action buttons and key points.
+- **Improved Calculator:** Advanced input fields for local tax, local shipping, international shipping, and insurance.
+- **Interactive Result Explainer:** Dynamic logic text that explains why certain taxes were applied.
+- **Sectioned Content:** Clear separation between calculation, rules, guides, examples, and FAQs.
+- **FAQ Accordion:** Interactive FAQ items for a clean information architecture.
+- **CTA Panels:** Professional call-to-action sections to guide users to further resources.
+- **SEO Optimized:** Meta tags and semantically structured HTML for better search engine rankings.
 
 ## Current Plan: Initial Implementation
 1.  **HTML Structure:** Define the input form, result area, and SEO content sections.
